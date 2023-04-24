@@ -35,3 +35,8 @@ jobs:
     with:
       flink_version: 1.16.1
       run_dependency_convergence: false
+  multiple-branches:
+    uses: ././github/workflows/ci.yml
+    with:
+      flink_version: 1.16.1
+      flink_compatibility:  [ {branch: main, version: {"1.17-SNAPSHOT", "1.18-SNAPSHOT" } } ]
